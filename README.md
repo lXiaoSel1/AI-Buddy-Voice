@@ -33,7 +33,7 @@
 
 | | Breeze 语音 | GPT-SoVITS 语音 |
 |---|---|---|
-| 语气 | 能跟着情绪变语气 | 以平静的语气为主 |
+| 语气 | 能跟着情绪变语气 | 只有平静的语气 |
 | 显卡 | NVIDIA（CUDA），启动时至少 9.5 GiB 空闲显存 | NVIDIA（CUDA），启动时至少 4 GiB 空闲显存 |
 | 第一次准备时下载（含共用的语音识别，十进制 GB） | 约 11.18 GB | 约 6.92 GB |
 | 参考录音 | 一段平静语气、只有一个人说话的录音 | 同左，长度 3–10 秒 |
@@ -56,13 +56,17 @@
 3. **在哪里配音**：「这台电脑」或「MiniMax 云端」。
 4. **本机组件**：语音识别和声音模型是否就绪。
 
-**3. 准备组件。** 第一次用时，本机组件会显示「需要准备」。点准备以后开始下载，显示进度；离开这一页也会继续。只准备你选的那个引擎和共用的语音识别，不会顺带下载另一个引擎。
+**3. 准备组件。** 第一次用时，本机组件会显示「需要准备」。点 **下载** 开始下载，会显示进度，离开这一页也会接着下。只下载你选的那个引擎和共用的语音识别，不会顺带下载另一个引擎。
+
+从 AI 酱 2.0.12 起，如果插件更新后用的还是同一套组件、文件也都在这台电脑上，这一行会显示「需要校验」。点 **下载** 旁边的 **校验** 就行，不会重新下载；校验没通过，再点 **下载**。
 
 <img src="docs/images/voice-prepare.webp" width="620" alt="本机组件：语音识别已就绪，Breeze 声音模型需要准备（演示数据）">
 
 <img src="docs/images/voice-prepare-progress.webp" width="620" alt="准备中：Breeze 声音模型的下载进度条（演示数据）">
 
 **4. （可选）换成你的录音。** 先在 Galgame 里切到想换声音的角色，再回到插件页点 **换成我的录音…**：填上录音里说了什么，点 **换成这段录音**，选一段语气平静、只有一个人说话的 WAV 录音。GPT-SoVITS 的录音要 3–10 秒，这是模型本身的要求，导入时 AI 酱不会替你检查长度。请只用你有权使用的录音。
+
+从 AI 酱 2.0.12 起，角色有两份以上的声音时，**换成我的录音…** 左边会出现 **她的声音** 下拉，随时可以换回「预制声线」或别的录音。如果她正在说话，这一句会停下，下一句开始用新声音。
 
 <img src="docs/images/voice-my-recording.webp" width="620" alt="给 DeepSeek 换成你的录音：录音里说了什么、选择录音文件，以及录音只保存在这台电脑上的说明（演示数据）">
 
@@ -93,7 +97,7 @@
 
 <img src="docs/images/voice-group.webp" width="620" alt="群聊：Claude 正在说话，顶栏显示语音正在说，Auto 在等这一句读完（演示数据）">
 
-用 AI 酱 2.0.9 时，[一起玩牌](https://github.com/lXiaoSel1/AI-Buddy-Card-Games) 的声音菜单会多一条 **语音** 音量；牌桌上的文字等声音开始再显示，最多等 15 秒。
+从 AI 酱 2.0.9 起，[一起玩牌](https://github.com/lXiaoSel1/AI-Buddy-Card-Games) 的声音菜单会多一条 **语音** 音量；牌桌上的文字等声音开始再显示，最多等 15 秒。
 
 ## MiniMax 云配音
 
@@ -185,7 +189,7 @@ Install one, or both. They share the same speech recognizer, and only one local 
 
 | | Breeze Voice | GPT-SoVITS Voice |
 |---|---|---|
-| Tone | Follows her mood | Mainly calm |
+| Tone | Follows her mood | Calm only |
 | GPU | NVIDIA (CUDA), at least 9.5 GiB free memory at start | NVIDIA (CUDA), at least 4 GiB free memory at start |
 | First download (including shared recognition, decimal GB) | about 11.18 GB | about 6.92 GB |
 | Reference recording | A calm recording with only one person speaking | Same, 3–10 seconds |
@@ -197,8 +201,8 @@ Both can switch to **MiniMax cloud voice**, which prepares only the shared runti
 
 1. **Install**: in AI Buddy open **Extensions → Discover** and click **Install…** next to Breeze Voice or GPT-SoVITS Voice. Including presets, the Breeze plugin is about 8 MB and GPT-SoVITS about 11 MB. Installation imports the corresponding 11 presets and preserves existing settings; the voice model is prepared the first time it starts.
 2. **Open the voice page**: **Plugins → Voice** in the sidebar, or **Start** / **Open** on the **Installed** tab. Turning voice on in Galgame starts it too.
-3. **Prepare parts**: the first time, parts on this PC show "Needs setup". Preparing shows download progress and continues if you leave the page. Only the chosen engine and the shared recognizer are prepared.
-4. **(Optional) Use your recording**: switch to the character in Galgame, then choose **Use my recording…**, type exactly what is said, click **Use this recording** and pick a calm WAV with only one person speaking. GPT-SoVITS needs 3–10 seconds, a requirement of the model that AI Buddy does not check on import. Use only recordings you have the right to use.
+3. **Prepare parts**: the first time, parts on this PC show "Needs setup". Click **Download** to start; it shows progress and continues if you leave the page. Only the chosen engine and the shared recognizer are downloaded. From AI Buddy 2.0.12, if a plugin update keeps the same parts and their files are already on this PC, the row shows "Needs verification": click **Verify** next to **Download** instead and nothing is downloaded again. If verification fails, use **Download**.
+4. **(Optional) Use your recording**: switch to the character in Galgame, then choose **Use my recording…**, type exactly what is said, click **Use this recording** and pick a calm WAV with only one person speaking. GPT-SoVITS needs 3–10 seconds, a requirement of the model that AI Buddy does not check on import. Use only recordings you have the right to use. From AI Buddy 2.0.12, once a character has two or more voices, a **Her voice** menu appears to the left of **Use my recording…**, so you can switch back to the preset voice or to another recording at any time. If she is speaking, that sentence stops and the next one uses the new voice.
 5. **Use it in chat**: **Voice** at the right of the Galgame top bar shows the state; click it to turn voice on or off and choose the plugin and where voices are made.
 
 ### Live and voice input
