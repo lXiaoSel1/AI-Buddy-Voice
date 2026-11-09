@@ -3,7 +3,7 @@
     "onCommand:voice.breeze"
   ],
   "apiRange": "^1.0.0",
-  "appRange": "^2.0.11",
+  "appRange": ">=2.0.13",
   "arch": "x64",
   "author": "lXiaoSel1",
   "capabilities": [
@@ -11,7 +11,7 @@
   ],
   "category": "voice",
   "dependencies": {
-    "ai-buddy.voice-shared-runtime": "1.0.2"
+    "ai-buddy.voice-shared-runtime": "1.0.3"
   },
   "description": "选择本地 Breeze 或 MiniMax 云配音。共用本地流式识别、录音、轮流 Live 和播放。",
   "entry": "entry.mjs",
@@ -21,7 +21,7 @@
   "name": "Breeze 语音",
   "platform": "win32",
   "schemaVersion": 1,
-  "version": "1.0.2",
+  "version": "1.0.3",
   "dataSchemaVersion": 1,
   "compatibleDataVersions": [
     1

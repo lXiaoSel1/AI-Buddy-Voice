@@ -1,7 +1,7 @@
 {
-  "version": "1.0.2",
-  "tag": "v1.0.2",
-  "appRange": "^2.0.11",
+  "version": "1.0.3",
+  "tag": "v1.0.3",
+  "appRange": ">=2.0.13",
   "publishedAt": "2026-11-09T17:45:33Z",
   "repository": "https://github.com/lXiaoSel1/AI-Buddy-Voice",
   "packageNames": [

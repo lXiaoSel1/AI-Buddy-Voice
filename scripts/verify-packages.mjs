@@ -14,6 +14,7 @@ const json = async file => JSON.parse(await readFile(file, 'utf8'));
 // Verify the delivered ZIPs, including their actual decompressed reference bytes.
 export async function verifyPackages(directory) {
   const receipt = await json(join(directory, 'packages.json'));
+  const release = await json(join(root, 'release.json'));
   const results = [];
   for (const row of [...receipt.packages].sort((a, b) => a.id.localeCompare(b.id))) {
     const bytes = await readFile(join(directory, row.archive));
@@ -64,9 +65,9 @@ export async function verifyPackages(directory) {
       }
       assert.deepEqual(audio.sort(), [...expectedAudio].sort(), 'ZIP has exactly the declared preset audio');
     }
-    assert.equal(entry.manifest.version, '1.0.2');
-    assert.equal(entry.manifest.appRange, '^2.0.11');
-    assert.deepEqual(entry.manifest.dependencies, row.id === 'ai-buddy.voice-shared-runtime' ? {} : {'ai-buddy.voice-shared-runtime': '1.0.2'});
+    assert.equal(entry.manifest.version, release.version);
+    assert.equal(entry.manifest.appRange, release.appRange);
+    assert.deepEqual(entry.manifest.dependencies, row.id === 'ai-buddy.voice-shared-runtime' ? {} : {'ai-buddy.voice-shared-runtime': release.version});
     results.push({id: row.id, profiles: row.id === 'ai-buddy.voice-shared-runtime' ? 0 : 11,
       audioFiles: audio.length, audioBytes: audio.reduce((sum, path) => sum + files.get(path).length, 0)});
   }

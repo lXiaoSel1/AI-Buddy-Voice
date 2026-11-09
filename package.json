@@ -1,6 +1,6 @@
 {
   "name": "ai-buddy-voice",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": true,
   "description": "Standalone AI Buddy voice plugin source and deterministic package builder",
   "type": "module",
