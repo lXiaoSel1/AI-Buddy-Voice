@@ -1,20 +1,20 @@
-# Voice 1.0.1 source delivery
+# Voice 1.0.2 source delivery
 
-Prepared source and unsigned plugin packages for the planned AI-Buddy-Voice release v1.0.1. This is a local delivery; remote repository creation, tagging, signing, pushing, uploading and model/audio acceptance are separate steps.
+Source and unsigned review packages for AI-Buddy-Voice v1.0.2. Final source-commit binding, signing and publication belong to the consolidated release process.
 
-- Branch: codex/voice-release-209. Planned origin: https://github.com/lXiaoSel1/AI-Buddy-Voice.git.
-- All three versions are 1.0.1; appRange is ^2.0.9. Both engines require shared runtime 1.0.1 exactly. Permissions, schema and license template fields retain their input values.
-- Original worker/entry/assets/LICENSE bytes are preserved. Final downloads.json is copied byte-for-byte; ASSET-NOTICES updates only release status and fixed upstream FFmpeg preparation.
-- SDK source: AI Buddy integration baseline 1dfee0cbdffd03de61f720183730efa9b1e6bdb0. scripts/package-plugin.mjs plus src/plugin-archive.mjs and src/plugin-manifest.mjs are exact copies, with hashes in PROVENANCE.json. They use Node built-ins only.
-- Rebuild with Node 24.21.0: node scripts/build.mjs --out=../voice-artifacts-new. No npm install, node_modules or host checkout is needed. Use a fresh output directory outside the repository. release.json fixes the release-entry timestamp.
-- Small plugin ZIPs and per-package release-entry.json are in ../voice-artifacts. packages.json records source commit/tree, exact hashes and byte counts; BUILD-VERIFICATION.json records packaging checks and a second-build comparison.
-- Actual package content/hash/privacy checks passed. Final downloads were parsed by the actual host parser, including the pinned upstream FFmpeg format, and every missing inventory source is mapped. No model weights, large resource ZIPs, personal recordings, private absolute paths, API keys or account data are included.
-- Public download URLs are planned and have not been claimed reachable. No model process or real cloud API was called. No formal signing or publication was performed.
+- Branch: `codex/voice-presets-release`; source baseline: `89d1280aea7d3b360a317d012ea926992faaa0e5`.
+- All three packages are 1.0.2 for AI Buddy `^2.0.11`. Each engine requires shared runtime 1.0.2 exactly. Existing manifest permissions, API/data schemas and license fields are preserved.
+- Each engine carries 11 presets in `presets/index.json`. Breeze contains 11 full reference WAVs; GPT contains 11 existing short WAVs plus the 11 full originals for explicit cloud-cloning consent. Installation imports missing presets and preserves existing selections and personal recordings.
+- [PRESET-SOURCES.md](PRESET-SOURCES.md) and [presets/sources.json](presets/sources.json) record source manifests, original hashes, transcripts and existing derivation methods. All 22 unique inputs are copied verbatim; 33 packaged WAVs total 18,535,004 bytes. No generated audition output or user data is an input.
+- Existing worker, entry, `assets.json`, `downloads.json`, SDK, LICENSE and README screenshot bytes are preserved. No model weights or large runtime archives are rebuilt.
+- With Node 24.21.0: `node scripts/build.mjs --out=../voice-artifacts-new`, then `node scripts/verify-packages.mjs ../voice-artifacts-new`. Use a fresh output directory outside the checkout; no npm install or host source is needed. `release.json` fixes the timestamp; `packages.json` records hashes, sizes and source Git metadata, including dirty-worktree state.
+- The old 1.0.1 ZIPs fail the 11-preset requirement. Eight packaging regressions pass against the real build command and delivered ZIP entries, including byte-for-byte source matching, repeatability, extra/altered/missing/disguised audio, altered manifests, private paths and credentials.
+- No real synthesis, voice model process, microphone, cloud API, upload, MiniMax voice creation, signing or publication was performed by this source-delivery task. Public URLs remain planned until the consolidated release verifies them.
 
-| Package | ZIP bytes | SHA-256 |
+| Review package | ZIP bytes | SHA-256 |
 |---|---:|---|
-| ai-buddy.voice-shared-runtime | 248428 | `0f059eb81b02356fa97367381b2517f4fb9ae813f06a0f49a7864b762c1f17ca` |
-| ai-buddy.voice-breeze | 1654217 | `c398e266606714a8e7d53c0595ec25f3c9a6469a5254d74e279ba6da96b58d93` |
-| ai-buddy.voice-gpt-sovits | 1499422 | `d8875bd5e2e69be150a2dc03303c7023db42ee429e8c8d1595c7a8c96814d85a` |
+| ai-buddy.voice-shared-runtime | 248427 | `12ec9a51c572de4763636de7dec39c449f049b7f158485d0d262a73eb6915378` |
+| ai-buddy.voice-breeze | 7656787 | `7cf20fb54448e98514138034183c4413264f2a98f2abf63a9406307cb713b6b5` |
+| ai-buddy.voice-gpt-sovits | 10267732 | `b411017203b4bbfaa6989dfedd02f074165a4b77b1d287dfe58c819f07cbf247` |
 
-The bilingual README records selected-engine download totals, user-imported references, Breeze non-commercial notices, MiniMax authorization/fees, and fixed upstream FFmpeg preparation without an additional legal authorization claim.
+These hashes identify the review ZIP bytes. The final release must be rebuilt from the reviewed source commit so its receipt records that commit.

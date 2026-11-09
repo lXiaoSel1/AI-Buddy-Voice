@@ -1,13 +1,14 @@
 {
   "name": "ai-buddy-voice",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": true,
   "description": "Standalone AI Buddy voice plugin source and deterministic package builder",
   "type": "module",
   "license": "SEE LICENSE IN LICENSE.md",
   "author": "lXiaoSel1",
   "scripts": {
-    "build": "node scripts/build.mjs"
+    "build": "node scripts/build.mjs",
+    "test": "node --test scripts/build.test.mjs"
   },
   "engines": {
     "node": "24.21.0"

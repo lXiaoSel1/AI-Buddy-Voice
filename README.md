@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/lXiaoSel1/AI-Buddy-Voice/releases"><img src="https://img.shields.io/github/v/release/lXiaoSel1/AI-Buddy-Voice?label=%E7%89%88%E6%9C%AC" alt="版本"></a>
-  <img src="https://img.shields.io/badge/%E9%9C%80%E8%A6%81-AI%20%E9%85%B1%202.0.9-ff8fab" alt="需要 AI 酱 2.0.9">
+  <img src="https://img.shields.io/badge/%E9%9C%80%E8%A6%81-AI%20%E9%85%B1%202.0.11-ff8fab" alt="需要 AI 酱 2.0.11">
   <img src="https://img.shields.io/badge/%E5%B9%B3%E5%8F%B0-Windows%2010%2F11%20x64-8a2be2" alt="平台：Windows 10/11 x64">
   <img src="https://img.shields.io/badge/%E6%9C%AC%E6%9C%BA%E9%85%8D%E9%9F%B3-NVIDIA%20%E6%98%BE%E5%8D%A1-76b900" alt="本机配音：NVIDIA 显卡">
   <a href="LICENSE.md"><img src="https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF-Apache--2.0%20%2B%20Commons%20Clause-e05d44" alt="许可：Apache-2.0 + Commons Clause"></a>
@@ -12,7 +12,7 @@
 
 [AI 酱本体](https://github.com/lXiaoSel1/AI-Buddy) · [B站陪伴](https://github.com/lXiaoSel1/AI-Buddy-Bilibili) · [QQ连接](https://github.com/lXiaoSel1/AI-Buddy-QQ) · [一起玩牌](https://github.com/lXiaoSel1/AI-Buddy-Card-Games) · **语音**（本仓库）
 
-**当前版本：1.0.1** · 需要 [AI 酱](https://github.com/lXiaoSel1/AI-Buddy) 2.0.9。这是 AI 酱的官方插件，在 AI 酱的 **扩展中心** 里安装，不用单独下载。之前装过 1.0.0 的话，升级到 AI 酱 2.0.9 后，在 **扩展中心 → 更新与维护** 里把它更新到 1.0.1；1.0.0 只能配 AI 酱 2.0.8。
+**当前版本：1.0.2** · 需要 [AI 酱](https://github.com/lXiaoSel1/AI-Buddy) 2.0.11。这是 AI 酱的官方插件，在 AI 酱的 **扩展中心** 里安装，不用单独下载。之前装过旧版的话，升级到 AI 酱 2.0.11 后，在 **扩展中心 → 更新与维护** 里把它更新到 1.0.2。
 
 让 AI 酱里的角色开口说话。她的回复会用她自己的声音读出来，文字跟着播放进度出现；你也可以开 Live 和她轮流说话，或者录一段话转成文字、改好再发。本仓库是两个语音插件 **Breeze 语音** 和 **GPT-SoVITS 语音** 的源码，它们共用一个内部组件。
 
@@ -23,7 +23,7 @@
 - **读出她的回复**：私聊、群聊和一起玩牌里都能用。配音的回复按实际播放进度显示，已经读完的部分会变暗；配音失败或超时后，文字照常显示（牌桌上最多等 15 秒）。
 - **Live 轮流说话**：你说一句，她回一句；进度条显示你说、识别、她想、她说四个阶段。
 - **录音输入**：说完以后，识别出的文字放进输入框，可以先改再发，不会自动发送。
-- **每位角色一种声音**：可以换成你自己准备的录音。录音默认只存在这台电脑上，只给这位角色用；只有你明确同意云端克隆时才会上传。
+- **11 位角色的预制声音**：两个插件各带 11 档，安装后自动导入，保留已有的声音选择和自定义录音。也可以换成你自己准备的录音。录音默认只存在这台电脑上，只给这位角色用；只有你明确同意云端克隆时才会上传。
 - **本机或云端**：默认在这台电脑上配音，不上传、不花钱；不想占显卡时可以改用 MiniMax 云配音，按字数计费。
 - **牌桌喊话**：在一起玩牌里，她们会用合成语音喊出「All in」「三条」这类话，牌桌的声音菜单里有单独的语音音量。
 
@@ -43,7 +43,7 @@
 
 ## 快速上手
 
-**1. 安装。** 在 AI 酱左侧栏打开 **扩展中心 → 发现**，在「Breeze 语音」或「GPT-SoVITS 语音」右边点 **安装…**。插件本身不到 2 MB，声音模型要等第一次启动时才准备。
+**1. 安装。** 在 AI 酱左侧栏打开 **扩展中心 → 发现**，在「Breeze 语音」或「GPT-SoVITS 语音」右边点 **安装…**。插件包（含预制参考）Breeze 约 8 MB、GPT-SoVITS 约 11 MB，安装后会自动导入对应的 11 档预制声线，已有设置保持不变。声音模型要等第一次启动时才准备。
 
 **2. 打开语音插件页。** 左侧栏 **插件 → 语音**。也可以在 **扩展中心 → 已安装** 里点「启动」或「打开」，或者直接在 Galgame 顶栏打开语音，插件会自动启动。
 
@@ -113,7 +113,7 @@
 
 ## 下载与磁盘空间
 
-插件本身很小，只含源码和固定的组件清单。声音模型、Python 环境和其他运行组件由 AI 酱按 `assets.json`、`downloads.json` 单独准备，本仓库不含这些大文件、个人参考录音或账户资料。
+插件包包含源码、固定的组件清单和已批准的 11 角色预制参考，来源与摘要见 [PRESET-SOURCES.md](PRESET-SOURCES.md)。声音模型、Python 环境和其他运行组件由 AI 酱按 `assets.json`、`downloads.json` 单独准备，本仓库不含这些大文件、用户个人参考录音或账户资料。下表是另行准备的运行组件，不含插件包本身。
 
 | 组件 | 第一次下载 | 清单展开后 |
 |---|---:|---:|
@@ -129,7 +129,7 @@
 - 你导入的参考录音保存在 AI 酱存档目录的 `voice/profiles/` 下，只给对应的角色用。
 - 改用 MiniMax 云配音时，要读出来的文字会发给 MiniMax。参考录音只有在你明确同意云端克隆时才会上传（单个角色或批量都要确认），接口要求时还会附上用于校验的文字，可能产生费用。
 - 语音组件按固定清单下载，并核对大小和 SHA-256。
-- 插件包里没有预置任何个人声线、录音或账号。
+- 插件包只带已批准的角色预制参考，不含用户个人录音或账号。全长云参考也只保存在本机，安装不会上传录音或创建 MiniMax 音色。
 
 ## 已知限制
 
@@ -140,7 +140,7 @@
 
 ## 技术说明
 
-三个插件包：`ai-buddy.voice-breeze`、`ai-buddy.voice-gpt-sovits` 和内部共用的 `ai-buddy.voice-shared-runtime`，面向 Windows x64 和 AI Buddy ^2.0.9。两个引擎都精确依赖共用组件 1.0.1。两个引擎都装了时，升级计划会明确列出并一起更新它们和共用组件，保留原来的启停状态和各自的用户资料。
+三个插件包：`ai-buddy.voice-breeze`、`ai-buddy.voice-gpt-sovits` 和内部共用的 `ai-buddy.voice-shared-runtime`，面向 Windows x64 和 AI Buddy ^2.0.11。三个包版本均为 1.0.2，两个引擎都精确依赖共用组件 1.0.2。两个引擎都装了时，升级计划会明确列出并一起更新它们和共用组件，保留原来的启停状态和各自的用户资料。
 
 ### 独立构建
 
@@ -164,7 +164,7 @@ node scripts/build.mjs --out=../voice-artifacts
 
 ## English
 
-**Current version: 1.0.1** · requires [AI Buddy](https://github.com/lXiaoSel1/AI-Buddy) 2.0.9. This is an official AI Buddy plugin; install it from **Extensions** inside AI Buddy, no separate download needed. If you had 1.0.0, update it to 1.0.1 under **Extensions → Updates and maintenance** after upgrading AI Buddy to 2.0.9; 1.0.0 only works with AI Buddy 2.0.8.
+**Current version: 1.0.2** · requires [AI Buddy](https://github.com/lXiaoSel1/AI-Buddy) 2.0.11. This is an official AI Buddy plugin; install it from **Extensions** inside AI Buddy, no separate download needed. After upgrading AI Buddy to 2.0.11, update an older plugin under **Extensions → Updates and maintenance**.
 
 Let your AI Buddy characters talk. Her replies are read aloud in her own voice, with the text following the playback; you can also take turns talking with her in Live, or record a few sentences into text and edit them before sending. This repository holds the source of the two voice plugins, **Breeze Voice** and **GPT-SoVITS Voice**, which share one internal runtime.
 
@@ -175,7 +175,7 @@ Let your AI Buddy characters talk. Her replies are read aloud in her own voice, 
 - **Reads her replies aloud** in private chat, group chat and Card Games. A voiced reply appears in step with the actual playback and the part already read is dimmed; if voicing fails or times out, the text is shown anyway (the card table waits at most 15 seconds).
 - **Live**: take turns talking. The strip shows four stages: you, recognizing, thinking, speaking.
 - **Voice input**: the recognized text goes into the input box so you can edit it; nothing is sent automatically.
-- **One voice per character**: use a recording you prepared. It stays on this computer by default and is used only for that character; it is uploaded only if you explicitly agree to cloud cloning.
+- **11 preset character voices**: each plugin imports its 11 presets on installation, preserving existing selections and custom recordings. You can also use a recording you prepared. It stays on this computer by default and is used only for that character; it is uploaded only if you explicitly agree to cloud cloning.
 - **Local or cloud**: local voice uploads nothing and costs nothing; MiniMax cloud voice needs no GPU and is billed by characters.
 - **Table calls**: in Card Games the characters call out things like "All in", and the sound menu has a separate voice volume.
 
@@ -195,7 +195,7 @@ Both can switch to **MiniMax cloud voice**, which prepares only the shared runti
 
 ### Quick start
 
-1. **Install**: in AI Buddy open **Extensions → Discover** and click **Install…** next to Breeze Voice or GPT-SoVITS Voice. The plugin itself is under 2 MB; the voice model is prepared the first time it starts.
+1. **Install**: in AI Buddy open **Extensions → Discover** and click **Install…** next to Breeze Voice or GPT-SoVITS Voice. Including presets, the Breeze plugin is about 8 MB and GPT-SoVITS about 11 MB. Installation imports the corresponding 11 presets and preserves existing settings; the voice model is prepared the first time it starts.
 2. **Open the voice page**: **Plugins → Voice** in the sidebar, or **Start** / **Open** on the **Installed** tab. Turning voice on in Galgame starts it too.
 3. **Prepare parts**: the first time, parts on this PC show "Needs setup". Preparing shows download progress and continues if you leave the page. Only the chosen engine and the shared recognizer are prepared.
 4. **(Optional) Use your recording**: switch to the character in Galgame, then choose **Use my recording…**, type exactly what is said, click **Use this recording** and pick a calm WAV with only one person speaking. GPT-SoVITS needs 3–10 seconds, a requirement of the model that AI Buddy does not check on import. Use only recordings you have the right to use.
@@ -211,11 +211,11 @@ Set "Where voices are made" to **MiniMax cloud** and add a configuration: name, 
 
 ### Downloads and disk space
 
-The plugin packages contain wrapper source and pinned inventories only. AI Buddy prepares models, Python and other runtime components separately from `assets.json` and `downloads.json`; this repository contains no runtime archives, model weights, personal references or account data. Fresh Breeze plus shared components total about **11.18 GB**, GPT-SoVITS plus shared about **6.92 GB** (decimal GB; byte counts in the Chinese table above). Verified components are reused; downloading and extraction need extra temporary space. The totals include fixed upstream weights and FFmpeg. Components live under `voice/components/` in the AI Buddy data folder.
+The plugin packages contain wrapper source, pinned inventories and the approved 11-character references documented in [PRESET-SOURCES.md](PRESET-SOURCES.md). AI Buddy prepares models, Python and other runtime components separately from `assets.json` and `downloads.json`; this repository contains no runtime archives, model weights, users' personal references or account data. The runtime totals below exclude the plugin packages themselves. Fresh Breeze plus shared components total about **11.18 GB**, GPT-SoVITS plus shared about **6.92 GB** (decimal GB; byte counts in the Chinese table above). Verified components are reused; downloading and extraction need extra temporary space. The totals include fixed upstream weights and FFmpeg. Components live under `voice/components/` in the AI Buddy data folder.
 
 ### Data and privacy
 
-Local voice and speech recognition run on this computer, and voice input audio is not sent to a voice cloud service; text you send from it goes through the character's chat connection like any message. Imported references are stored under `voice/profiles/` and used only for their character. With MiniMax cloud voice, the text to be read is sent to MiniMax; references are uploaded only when you explicitly agree to cloud cloning (for one character or in bulk), with verification text when the API requires it, which may cost money. Components are downloaded from a pinned inventory and checked against their sizes and SHA-256. No private voices, recordings or accounts are bundled.
+Local voice and speech recognition run on this computer, and voice input audio is not sent to a voice cloud service; text you send from it goes through the character's chat connection like any message. Imported references are stored under `voice/profiles/` and used only for their character. With MiniMax cloud voice, the text to be read is sent to MiniMax; references are uploaded only when you explicitly agree to cloud cloning (for one character or in bulk), with verification text when the API requires it, which may cost money. Components are downloaded from a pinned inventory and checked against their sizes and SHA-256. Only the approved character presets are bundled, with no users' personal recordings or accounts. Full cloud references also stay local; installing the plugin neither uploads audio nor creates a MiniMax voice.
 
 ### Known limitations
 
@@ -223,7 +223,7 @@ Local voice needs an NVIDIA GPU (CUDA). After release, catalog discovery, instal
 
 ### Technical notes
 
-Three packages: `ai-buddy.voice-breeze`, `ai-buddy.voice-gpt-sovits` and the internal `ai-buddy.voice-shared-runtime`, for Windows x64 and AI Buddy ^2.0.9. Each engine requires shared runtime 1.0.1 exactly. When both engines are installed, the reviewed upgrade plan updates the installed group together and preserves enablement and independent user data.
+Three packages: `ai-buddy.voice-breeze`, `ai-buddy.voice-gpt-sovits` and the internal `ai-buddy.voice-shared-runtime`, for Windows x64 and AI Buddy ^2.0.11. All three packages are version 1.0.2; each engine requires shared runtime 1.0.2 exactly. When both engines are installed, the reviewed upgrade plan updates the installed group together and preserves enablement and independent user data.
 
 With Node **24.21.0**, build from this checkout (no host checkout, npm installation or dependencies):
 

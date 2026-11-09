@@ -1,0 +1,250 @@
+{
+  "schemaVersion": 1,
+  "bundleId": "ai-buddy.character-voices-r04",
+  "version": 1,
+  "engine": "breeze",
+  "profiles": [
+    {
+      "characterId": "deepseek",
+      "label": "DeepSeek · 鲸鱼娘 · 预制声线",
+      "references": {
+        "calm": {
+          "file": "presets/audio/deepseek-calm.wav",
+          "bytes": 585604,
+          "sha256": "4f2cc378b6252edcd45f1c455493874235ed642c6daae49f6c292e374293bd6c",
+          "text": "爱好吗我最喜欢洗各种各样的东西洗衣服洗地板洗窗户看到脏东西变干净我就会特别有成就感是指休息时的爱好",
+          "language": "zh",
+          "durationMs": 12199
+        }
+      },
+      "cloudReference": {
+        "file": "presets/audio/deepseek-calm.wav",
+        "bytes": 585604,
+        "sha256": "4f2cc378b6252edcd45f1c455493874235ed642c6daae49f6c292e374293bd6c",
+        "text": "爱好吗我最喜欢洗各种各样的东西洗衣服洗地板洗窗户看到脏东西变干净我就会特别有成就感是指休息时的爱好",
+        "language": "zh",
+        "durationMs": 12199
+      }
+    },
+    {
+      "characterId": "grok",
+      "label": "Grok · 预制声线",
+      "references": {
+        "calm": {
+          "file": "presets/audio/grok-calm.wav",
+          "bytes": 684662,
+          "sha256": "1387e15bf8cb599b8c12aef7737149df22ebfc33900d5fc7c8667df4346d2334",
+          "text": "英雄形态的宵宫姐姐登场邪恶退散正义必胜就这么和小孩子们介绍你教给我的新力量没问题吧应该很帅吧哈哈如果有人欺负你也要告诉我哦",
+          "language": "zh",
+          "durationMs": 14263
+        }
+      },
+      "cloudReference": {
+        "file": "presets/audio/grok-calm.wav",
+        "bytes": 684662,
+        "sha256": "1387e15bf8cb599b8c12aef7737149df22ebfc33900d5fc7c8667df4346d2334",
+        "text": "英雄形态的宵宫姐姐登场邪恶退散正义必胜就这么和小孩子们介绍你教给我的新力量没问题吧应该很帅吧哈哈如果有人欺负你也要告诉我哦",
+        "language": "zh",
+        "durationMs": 14263
+      }
+    },
+    {
+      "characterId": "seed",
+      "label": "Seed · 预制声线",
+      "references": {
+        "calm": {
+          "file": "presets/audio/seed-calm.wav",
+          "bytes": 738578,
+          "sha256": "2b21b9c2b878162096875ea6add714caa6723202dbf98d2c91a22b1dc7f181d8",
+          "text": "调酒师可是很忙的即使不在酒馆工作也要抽出时间来收集配方所以所以没有要紧事情的话就不要来打搅我猫尾酒馆的招牌调酒师",
+          "language": "zh",
+          "durationMs": 15386
+        }
+      },
+      "cloudReference": {
+        "file": "presets/audio/seed-calm.wav",
+        "bytes": 738578,
+        "sha256": "2b21b9c2b878162096875ea6add714caa6723202dbf98d2c91a22b1dc7f181d8",
+        "text": "调酒师可是很忙的即使不在酒馆工作也要抽出时间来收集配方所以所以没有要紧事情的话就不要来打搅我猫尾酒馆的招牌调酒师",
+        "language": "zh",
+        "durationMs": 15386
+      }
+    },
+    {
+      "characterId": "kimi",
+      "label": "Kimi · 预制声线",
+      "references": {
+        "calm": {
+          "file": "presets/audio/kimi-calm.wav",
+          "bytes": 634506,
+          "sha256": "1c34dce6285284f105ee86cf5b9c15a7593250443e7d5507066bbef55c78494e",
+          "text": "这么早没有必要的工作时我习惯中午起床啊有点困了小睡一会吧不用提醒我到了工作时间我自然会醒的",
+          "language": "zh",
+          "durationMs": 13218
+        }
+      },
+      "cloudReference": {
+        "file": "presets/audio/kimi-calm.wav",
+        "bytes": 634506,
+        "sha256": "1c34dce6285284f105ee86cf5b9c15a7593250443e7d5507066bbef55c78494e",
+        "text": "这么早没有必要的工作时我习惯中午起床啊有点困了小睡一会吧不用提醒我到了工作时间我自然会醒的",
+        "language": "zh",
+        "durationMs": 13218
+      }
+    },
+    {
+      "characterId": "qwen",
+      "label": "Qwen · 预制声线",
+      "references": {
+        "calm": {
+          "file": "presets/audio/qwen-calm.wav",
+          "bytes": 734816,
+          "sha256": "c116003389917914d01c81bd18815f1f0216b181a5aaac1a45b81fc413f57d85",
+          "text": "神女披冠的剧本我早就念得烂熟但直到今天我才知道神女原来真有其人世上缘分果然奇妙唯愿他往后都有好友相伴",
+          "language": "zh",
+          "durationMs": 15308
+        }
+      },
+      "cloudReference": {
+        "file": "presets/audio/qwen-calm.wav",
+        "bytes": 734816,
+        "sha256": "c116003389917914d01c81bd18815f1f0216b181a5aaac1a45b81fc413f57d85",
+        "text": "神女披冠的剧本我早就念得烂熟但直到今天我才知道神女原来真有其人世上缘分果然奇妙唯愿他往后都有好友相伴",
+        "language": "zh",
+        "durationMs": 15308
+      }
+    },
+    {
+      "characterId": "minimax",
+      "label": "MiniMax · 预制声线",
+      "references": {
+        "calm": {
+          "file": "presets/audio/minimax-calm.wav",
+          "bytes": 688422,
+          "sha256": "af7cc7ff5324e5b5db4af371ee4e3a23fba5080575dd36add85e3bd0c558af84",
+          "text": "神之眼啊那可是导引元素力所必要的装置呢唯独在你身上却是例外究竟是什么原理有了你有空陪姐姐做个实验吗",
+          "language": "zh",
+          "durationMs": 14341
+        }
+      },
+      "cloudReference": {
+        "file": "presets/audio/minimax-calm.wav",
+        "bytes": 688422,
+        "sha256": "af7cc7ff5324e5b5db4af371ee4e3a23fba5080575dd36add85e3bd0c558af84",
+        "text": "神之眼啊那可是导引元素力所必要的装置呢唯独在你身上却是例外究竟是什么原理有了你有空陪姐姐做个实验吗",
+        "language": "zh",
+        "durationMs": 14341
+      }
+    },
+    {
+      "characterId": "chatgpt",
+      "label": "GPT · 预制声线",
+      "references": {
+        "calm": {
+          "file": "presets/audio/chatgpt-calm.wav",
+          "bytes": 703470,
+          "sha256": "14908ee642e93fb5172a9cabdcd8353b2fce8f4efb4857ad04dabb4e07af818d",
+          "text": "琉璃亭和新月轩你更常去哪一家冠名堂的小丫头总是把对我的猜疑写在脸上要是让他知道了这些年来我对万明堂的资助他会露出怎样的表情来呢",
+          "language": "zh",
+          "durationMs": 14655
+        }
+      },
+      "cloudReference": {
+        "file": "presets/audio/chatgpt-calm.wav",
+        "bytes": 703470,
+        "sha256": "14908ee642e93fb5172a9cabdcd8353b2fce8f4efb4857ad04dabb4e07af818d",
+        "text": "琉璃亭和新月轩你更常去哪一家冠名堂的小丫头总是把对我的猜疑写在脸上要是让他知道了这些年来我对万明堂的资助他会露出怎样的表情来呢",
+        "language": "zh",
+        "durationMs": 14655
+      }
+    },
+    {
+      "characterId": "gemini",
+      "label": "Gemini · 预制声线",
+      "references": {
+        "calm": {
+          "file": "presets/audio/gemini-calm.wav",
+          "bytes": 734816,
+          "sha256": "3b51ab677546c2491f7ff02eaecc28412165225e16561daf7e8861226a8188c4",
+          "text": "神之眼是神对我的认可吧我要成为最优秀的侦察骑士才行我可不会认输有种不安的感觉刚才是凯亚陪着你吧他没给你添麻烦吧大多数时候都待在自己的工坊里",
+          "language": "zh",
+          "durationMs": 15308
+        }
+      },
+      "cloudReference": {
+        "file": "presets/audio/gemini-calm.wav",
+        "bytes": 734816,
+        "sha256": "3b51ab677546c2491f7ff02eaecc28412165225e16561daf7e8861226a8188c4",
+        "text": "神之眼是神对我的认可吧我要成为最优秀的侦察骑士才行我可不会认输有种不安的感觉刚才是凯亚陪着你吧他没给你添麻烦吧大多数时候都待在自己的工坊里",
+        "language": "zh",
+        "durationMs": 15308
+      }
+    },
+    {
+      "characterId": "claude",
+      "label": "Claude · 预制声线",
+      "references": {
+        "calm": {
+          "file": "presets/audio/claude-calm.wav",
+          "bytes": 640776,
+          "sha256": "7a5c0c5de385a039e59fecc18fb408d9663de49cd423cc10fcb05109dd5b97b3",
+          "text": "云青青兮欲雨水澹澹兮生烟你看今日这烟雨色如何我在孟州城中行商时常见这样的天气与玄风城处有细微的差别",
+          "language": "zh",
+          "durationMs": 13349
+        }
+      },
+      "cloudReference": {
+        "file": "presets/audio/claude-calm.wav",
+        "bytes": 640776,
+        "sha256": "7a5c0c5de385a039e59fecc18fb408d9663de49cd423cc10fcb05109dd5b97b3",
+        "text": "云青青兮欲雨水澹澹兮生烟你看今日这烟雨色如何我在孟州城中行商时常见这样的天气与玄风城处有细微的差别",
+        "language": "zh",
+        "durationMs": 13349
+      }
+    },
+    {
+      "characterId": "glm",
+      "label": "GLM · 预制声线",
+      "references": {
+        "calm": {
+          "file": "presets/audio/glm-calm.wav",
+          "bytes": 702216,
+          "sha256": "d7cb00798fc78dec9ceb9f9ff1b238aaaa3055c01a1b19a54f448039acd2e974",
+          "text": "样子美丽的伪物不好吗漂亮的礼物盒本身也很有价值吧既然人类只会相信自己想要相信的真相那就说明所谓的真相",
+          "language": "zh",
+          "durationMs": 14629
+        }
+      },
+      "cloudReference": {
+        "file": "presets/audio/glm-calm.wav",
+        "bytes": 702216,
+        "sha256": "d7cb00798fc78dec9ceb9f9ff1b238aaaa3055c01a1b19a54f448039acd2e974",
+        "text": "样子美丽的伪物不好吗漂亮的礼物盒本身也很有价值吧既然人类只会相信自己想要相信的真相那就说明所谓的真相",
+        "language": "zh",
+        "durationMs": 14629
+      }
+    },
+    {
+      "characterId": "hunyuan",
+      "label": "混元 · 预制声线",
+      "references": {
+        "calm": {
+          "file": "presets/audio/hunyuan-calm.wav",
+          "bytes": 672122,
+          "sha256": "008150757eeeec5759514c91fa2c072157fbbe04190e8ea9b0919e0d3a99e2f2",
+          "text": "心无杂念方可超然这是我从前所想经历种种才明白唯有心存牵挂才能唤醒守护的欲望让力量变得有意义听君赤令按照凡人的做法",
+          "language": "zh",
+          "durationMs": 14002
+        }
+      },
+      "cloudReference": {
+        "file": "presets/audio/hunyuan-calm.wav",
+        "bytes": 672122,
+        "sha256": "008150757eeeec5759514c91fa2c072157fbbe04190e8ea9b0919e0d3a99e2f2",
+        "text": "心无杂念方可超然这是我从前所想经历种种才明白唯有心存牵挂才能唤醒守护的欲望让力量变得有意义听君赤令按照凡人的做法",
+        "language": "zh",
+        "durationMs": 14002
+      }
+    }
+  ]
+}

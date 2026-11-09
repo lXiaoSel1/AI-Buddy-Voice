@@ -35,11 +35,14 @@
   ],
   "componentInput": "voice integration inputs, version 1.0.0; worker, entry, assets and license bytes preserved",
   "changes": [
-    "Package templates: 1.0.1, ^2.0.9, exact shared dependency 1.0.1",
+    "Package templates: 1.0.2, ^2.0.11, exact shared dependency 1.0.2",
     "Added final downloads.json metadata",
-    "Asset notice release status and fixed upstream FFmpeg preparation clarified"
+    "Asset notice release status and fixed upstream FFmpeg preparation clarified",
+    "Added approved character-voices-r04 presets: 11 profiles per engine, verbatim WAV references, GPT full cloud references, pinned sources in presets/sources.json"
   ],
   "privateReferencesIncluded": false,
   "modelWeightsIncluded": false,
-  "resourceArchivesIncluded": false
+  "resourceArchivesIncluded": false,
+  "presetReferencesIncluded": true,
+  "presetSources": "presets/sources.json"
 }

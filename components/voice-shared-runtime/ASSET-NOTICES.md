@@ -6,4 +6,4 @@ Breeze source is Apache-2.0. Breeze model materials, derivatives and self-hosted
 
 User role reference recordings are private data and are not included in the candidate packages. A local reference profile does not create or promise the same timbre on MiniMax: use the role's explicitly selected MiniMax voice binding. API keys are not included. Hosted service terms are separate from self-hosted model licenses.
 
-This source prepares voice package 1.0.1 for AI Buddy ^2.0.9. Public catalog signing and publication are separate release steps. Package metadata does not relicense any model assets or third-party distributions.
+This source prepares voice package 1.0.2 for AI Buddy ^2.0.11. Public catalog signing and publication are separate release steps. Package metadata does not relicense any model assets or third-party distributions.
