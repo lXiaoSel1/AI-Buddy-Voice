@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "hostRepository": "https://github.com/lXiaoSel1/AI-Buddy",
+  "hostBaseline": "1dfee0cbdffd03de61f720183730efa9b1e6bdb0",
+  "sdk": [
+    {
+      "path": "scripts/package-plugin.mjs",
+      "sha256": "f7ec1e2ee28859e36c50a6e426a9d875e6e36550c2376aa13a758c411275cb1a"
+    },
+    {
+      "path": "src/plugin-archive.mjs",
+      "sha256": "7d5e3389812fef5100c304b61651655d64ac941be66333385762be88d8c8d344"
+    },
+    {
+      "path": "src/plugin-manifest.mjs",
+      "sha256": "9dac16b7a04395dceee818015cd8e94674e8077a0958b56ec2bb067129863e2c"
+    }
+  ],
+  "components": [
+    {
+      "name": "voice-shared-runtime",
+      "assetsSha256": "36402e36a0e3249db75d6d93995bfd696f1759b0c1c8620300ab8a3df92b5eee",
+      "downloadsSha256": "8d6e870ecb95054e55a1e7454e9b129d024ebd77dd2980aa3f1edceb5ed6838a"
+    },
+    {
+      "name": "voice-breeze",
+      "assetsSha256": "2ac28cbb5632d3fcd250536fa30710ff2539d4ffda0235fa35a74aad3a212d37",
+      "downloadsSha256": "f63179fa70ab90723df79fa58bbc3557b3e1da5119e703a8d78f3d2a2c8ee467"
+    },
+    {
+      "name": "voice-gpt-sovits",
+      "assetsSha256": "0174e12240469f16e0bfb0630f5a6337c2c63f58ba4717443968b9a32f44657d",
+      "downloadsSha256": "dbf98ab5b0619a275dd31354e0ca945f79d869b01de331f838ff23f61d1cc59a"
+    }
+  ],
+  "componentInput": "voice integration inputs, version 1.0.0; worker, entry, assets and license bytes preserved",
+  "changes": [
+    "Package templates: 1.0.1, ^2.0.9, exact shared dependency 1.0.1",
+    "Added final downloads.json metadata",
+    "Asset notice release status and fixed upstream FFmpeg preparation clarified"
+  ],
+  "privateReferencesIncluded": false,
+  "modelWeightsIncluded": false,
+  "resourceArchivesIncluded": false
+}

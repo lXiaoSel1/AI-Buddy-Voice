@@ -1,0 +1,23 @@
+{
+  "activationEvents": [],
+  "apiRange": "^1.0.0",
+  "appRange": "^2.0.9",
+  "arch": "x64",
+  "author": "lXiaoSel1",
+  "capabilities": [],
+  "category": "voice",
+  "dependencies": {},
+  "description": "两种语音引擎共用的识别、云配音 worker 与运行协议；自动管理的内部依赖。",
+  "entry": "asr_worker.py",
+  "id": "ai-buddy.voice-shared-runtime",
+  "kind": "runtime",
+  "license": "Apache-2.0 + Commons Clause",
+  "name": "AI Buddy 共享语音运行依赖",
+  "platform": "win32",
+  "schemaVersion": 1,
+  "version": "1.0.1",
+  "dataSchemaVersion": 1,
+  "compatibleDataVersions": [
+    1
+  ]
+}

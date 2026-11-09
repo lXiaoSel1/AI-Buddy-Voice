@@ -1,0 +1,29 @@
+{
+  "activationEvents": [
+    "onCommand:voice.gpt-sovits"
+  ],
+  "apiRange": "^1.0.0",
+  "appRange": "^2.0.9",
+  "arch": "x64",
+  "author": "lXiaoSel1",
+  "capabilities": [
+    "commands.register"
+  ],
+  "category": "voice",
+  "dependencies": {
+    "ai-buddy.voice-shared-runtime": "1.0.1"
+  },
+  "description": "选择本地 GPT-SoVITS V5 Turbo 或 MiniMax 云配音。共用本地流式识别、录音、轮流 Live 和播放。",
+  "entry": "entry.mjs",
+  "id": "ai-buddy.voice-gpt-sovits",
+  "kind": "plugin",
+  "license": "Apache-2.0 + Commons Clause",
+  "name": "GPT-SoVITS 语音",
+  "platform": "win32",
+  "schemaVersion": 1,
+  "version": "1.0.1",
+  "dataSchemaVersion": 1,
+  "compatibleDataVersions": [
+    1
+  ]
+}

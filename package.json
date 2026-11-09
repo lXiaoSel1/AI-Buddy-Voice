@@ -1,0 +1,19 @@
+{
+  "name": "ai-buddy-voice",
+  "version": "1.0.1",
+  "private": true,
+  "description": "Standalone AI Buddy voice plugin source and deterministic package builder",
+  "type": "module",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "author": "lXiaoSel1",
+  "scripts": {
+    "build": "node scripts/build.mjs"
+  },
+  "engines": {
+    "node": "24.21.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lXiaoSel1/AI-Buddy-Voice.git"
+  }
+}
