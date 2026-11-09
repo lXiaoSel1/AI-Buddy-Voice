@@ -8,7 +8,8 @@
   "author": "lXiaoSel1",
   "scripts": {
     "build": "node scripts/build.mjs",
-    "test": "node --test scripts/build.test.mjs"
+    "test": "node --test scripts/build.test.mjs",
+    "check:next-release": "node scripts/check-next-release.mjs"
   },
   "engines": {
     "node": "24.21.0"

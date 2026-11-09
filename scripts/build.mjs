@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {assertNewReleaseCompatibility} from './lib/plugin-release-compatibility.mjs';
 import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import {mkdir, readFile, writeFile} from 'node:fs/promises';
@@ -18,8 +19,8 @@ assert.ok(outputRelative === '..' || outputRelative.startsWith('..' + sep) || is
 const json = async file => JSON.parse(await readFile(file, 'utf8'));
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const release = await json(join(root, 'release.json'));
-assert.equal(release.version, '1.0.2');
-assert.equal(release.appRange, '^2.0.11');
+if (release.version === '1.0.2') assert.equal(release.appRange, '^2.0.11', 'Historical 1.0.2 declaration is immutable');
+else assertNewReleaseCompatibility({id: 'ai-buddy.voice-shared-runtime', version: release.version, appRange: release.appRange, apiRange: '^1.0.0'});
 assert.ok(Number.isFinite(Date.parse(release.publishedAt)));
 const git = (...argv) => {
   try { return execFileSync('git', argv, {cwd: root, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore']}).trim(); }
@@ -37,6 +38,7 @@ for (const name of release.packageNames) {
   assert.equal(manifest.id, 'ai-buddy.' + name);
   assert.equal(manifest.version, release.version);
   assert.equal(manifest.appRange, release.appRange);
+  if (release.version !== '1.0.2') assertNewReleaseCompatibility(manifest);
   assert.deepEqual(manifest.dependencies, name === 'voice-shared-runtime' ? {} : {'ai-buddy.voice-shared-runtime': release.version});
   assert.equal(downloads.assetsSha256, sha(assetBytes), 'The download mapping must bind the unchanged asset inventory');
   const inventory = new Map(assets.files.map(file => [file.path, file]));
