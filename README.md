@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/lXiaoSel1/AI-Buddy-Voice/releases"><img src="https://img.shields.io/github/v/release/lXiaoSel1/AI-Buddy-Voice?label=%E7%89%88%E6%9C%AC" alt="版本"></a>
-  <img src="https://img.shields.io/badge/%E9%9C%80%E8%A6%81-AI%20%E9%85%B1%202.0.13-ff8fab" alt="需要 AI 酱 2.0.13">
+  <img src="https://img.shields.io/badge/%E9%9C%80%E8%A6%81-AI%20%E9%85%B1%202.0.14-ff8fab" alt="需要 AI 酱 2.0.14">
   <img src="https://img.shields.io/badge/%E5%B9%B3%E5%8F%B0-Windows%2010%2F11%20x64-8a2be2" alt="平台：Windows 10/11 x64">
   <img src="https://img.shields.io/badge/%E6%9C%AC%E6%9C%BA%E9%85%8D%E9%9F%B3-NVIDIA%20%E6%98%BE%E5%8D%A1-76b900" alt="本机配音：NVIDIA 显卡">
   <a href="LICENSE.md"><img src="https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF-Apache--2.0%20%2B%20Commons%20Clause-e05d44" alt="许可：Apache-2.0 + Commons Clause"></a>
@@ -12,7 +12,7 @@
 
 [AI 酱本体](https://github.com/lXiaoSel1/AI-Buddy) · [B站陪伴](https://github.com/lXiaoSel1/AI-Buddy-Bilibili) · [QQ连接](https://github.com/lXiaoSel1/AI-Buddy-QQ) · [一起玩牌](https://github.com/lXiaoSel1/AI-Buddy-Card-Games) · **语音**（本仓库）
 
-**当前版本：1.0.3** · 需要 [AI 酱](https://github.com/lXiaoSel1/AI-Buddy) 2.0.13。这是 AI 酱的官方插件，在 AI 酱的 **扩展中心** 里安装，不用单独下载。之前装过旧版的话，升级到 AI 酱 2.0.13 后，在 **扩展中心 → 更新与维护** 里把它更新到 1.0.3。
+**当前版本：1.0.3** · 需要 [AI 酱](https://github.com/lXiaoSel1/AI-Buddy) 2.0.14 或更新。这是 AI 酱的官方插件，在 AI 酱的 **扩展中心** 里安装，不用单独下载。之前装过旧版的话，升级到 AI 酱 2.0.14 后，在 **扩展中心 → 更新与维护** 里把它更新到 1.0.3。AI 酱 2.0.14 起按大版本号认语音插件：1.x 的语音插件在 2.0.14 和以后的本体上都能用，本体升级后不用跟着更新。2.0.13 已经撤回，在它上面 1.0.3 装好也启用不了。
 
 让 AI 酱里的角色开口说话。她的回复会用她自己的声音读出来，文字跟着播放进度出现；你也可以开 Live 和她轮流说话，或者录一段话转成文字、改好再发。本仓库是两个语音插件 **Breeze 语音** 和 **GPT-SoVITS 语音** 的源码，它们共用一个内部组件。
 
@@ -58,7 +58,7 @@
 
 **3. 准备组件。** 第一次用时，本机组件会显示「需要准备」。点 **下载** 开始下载，会显示进度，离开这一页也会接着下。只下载你选的那个引擎和共用的语音识别，不会顺带下载另一个引擎。
 
-从 AI 酱 2.0.12 起，如果插件更新后用的还是同一套组件、文件也都在这台电脑上，这一行会显示「需要校验」。点 **下载** 旁边的 **校验** 就行，不会重新下载；校验发现文件缺了或内容不对，再点 **下载**；提示校验被中断，或者校验时文件有变动，点 **重新校验**。AI 酱 2.0.13 修好了文件没问题却校验失败的情况；校验中途取消或失败时，已经核对过的文件下次不用重来。
+从 AI 酱 2.0.12 起，如果插件更新后用的还是同一套组件、文件也都在这台电脑上，这一行会显示「需要校验」。点 **下载** 旁边的 **校验** 就行，不会重新下载；校验发现文件缺了或内容不对，再点 **下载**；提示校验被中断，或者校验时文件有变动，点 **重新校验**。AI 酱 2.0.14 修好了文件没问题却校验失败的情况；校验中途取消或失败时，已经核对过的文件下次不用重来。
 
 <img src="docs/images/voice-prepare.webp" width="620" alt="本机组件：语音识别已就绪，Breeze 声音模型需要准备（演示数据）">
 
@@ -101,7 +101,7 @@
 
 ## MiniMax 云配音
 
-在插件页把「在哪里配音」改成 **MiniMax 云端**，按提示新增一条云配音配置：名字、模型和你自己的 MiniMax API Key。Key 加密保存在这台电脑上，保存后不再显示；保存配置不会上传任何声音。AI 酱 2.0.13 起，新增配置时可以选 **地区**（中国大陆 / 国际），两个地区的 Key 不通用，换地区要重新填 Key；云配音的联网跟随 AI 酱 **通用设置 → 网络** 里的代理（需要语音插件 1.0.3）。
+在插件页把「在哪里配音」改成 **MiniMax 云端**，按提示新增一条云配音配置：名字、模型和你自己的 MiniMax API Key。Key 加密保存在这台电脑上，保存后不再显示；保存配置不会上传任何声音。AI 酱 2.0.14 起，新增配置时可以选 **地区**（中国大陆 / 国际），两个地区的 Key 不通用，换地区要重新填 Key；云配音的联网跟随 AI 酱 **通用设置 → 网络** 里的代理（需要语音插件 1.0.3）。
 
 <img src="docs/images/voice-cloud.webp" width="760" alt="云配音：各角色的云端声音状态、在哪里配音选了 MiniMax 云端、云配音账号和克隆费用说明（演示数据）">
 
@@ -110,7 +110,7 @@
 <img src="docs/images/voice-cloud-voices.webp" width="620" alt="给 DeepSeek 换云端音色：全部、系统音色、克隆音色、设计音色分类和搜索（演示数据）">
 
 - **批量准备云端声音**：把几位角色的参考录音一次克隆成云端音色。开始之前会弹出确认窗口，列出要上传哪些角色、新克隆几个、大概多少钱。克隆的角色一开始都不勾选，只上传你明确选中并确认的那几位。
-- **过期的云端音色**（AI 酱 2.0.13 起）：克隆的音色过期后，这位角色那一行会写「这个云端音色已经过期。」，点 **重新克隆…** 重新克隆一个，照样先弹出费用确认窗口。
+- **过期的云端音色**（AI 酱 2.0.14 起）：克隆的音色过期后，这位角色那一行会写「这个云端音色已经过期。」，点 **重新克隆…** 重新克隆一个，照样先弹出费用确认窗口。
 
 <img src="docs/images/voice-cloud-cost.webp" width="420" alt="确认窗口：上传 3 个角色的声音到 MiniMax，新克隆 3 个，克隆音色费约 ¥29.70，激活用的文字合成另按字数计费（演示数据）">
 
@@ -145,7 +145,7 @@
 
 ## 技术说明
 
-三个插件包：`ai-buddy.voice-breeze`、`ai-buddy.voice-gpt-sovits` 和内部共用的 `ai-buddy.voice-shared-runtime`，面向 Windows x64 和 AI Buddy >= 2.0.13。三个包版本均为 1.0.3，两个引擎都精确依赖共用组件 1.0.3。两个引擎都装了时，升级计划会明确列出并一起更新它们和共用组件，保留原来的启停状态和各自的用户资料。
+三个插件包：`ai-buddy.voice-breeze`、`ai-buddy.voice-gpt-sovits` 和内部共用的 `ai-buddy.voice-shared-runtime`，面向 Windows x64。清单写的是 AI Buddy >= 2.0.13，但 2.0.13 认不了 1.0.3（已撤回），实际要用 2.0.14 或更新的本体。三个包版本均为 1.0.3，两个引擎都精确依赖共用组件 1.0.3。AI 酱 2.0.14 起按包版本的大版本号认语音包，本体支持 1.x；以后的 1.x 版本 `appRange` 只写下限、至少 2.0.14，约定见 [语音插件接口兼容约定](https://github.com/lXiaoSel1/AI-Buddy/blob/main/docs/VOICE-PLUGIN-COMPATIBILITY.md)。两个引擎都装了时，升级计划会明确列出并一起更新它们和共用组件，保留原来的启停状态和各自的用户资料。
 
 ### 独立构建
 
@@ -169,7 +169,7 @@ node scripts/build.mjs --out=../voice-artifacts
 
 ## English
 
-**Current version: 1.0.3** · requires [AI Buddy](https://github.com/lXiaoSel1/AI-Buddy) 2.0.13. This is an official AI Buddy plugin; install it from **Extensions** inside AI Buddy, no separate download needed. After upgrading AI Buddy to 2.0.13, update an older plugin under **Extensions → Updates and maintenance**.
+**Current version: 1.0.3** · requires [AI Buddy](https://github.com/lXiaoSel1/AI-Buddy) 2.0.14 or later. This is an official AI Buddy plugin; install it from **Extensions** inside AI Buddy, no separate download needed. After upgrading AI Buddy to 2.0.14, update an older plugin under **Extensions → Updates and maintenance**. From 2.0.14 AI Buddy recognizes voice plugins by major version: every 1.x voice plugin works with 2.0.14 and later, so an app update does not require a plugin update. 2.0.13 has been withdrawn; on it, 1.0.3 installs but cannot be enabled.
 
 Let your AI Buddy characters talk. Her replies are read aloud in her own voice, with the text following the playback; you can also take turns talking with her in Live, or record a few sentences into text and edit them before sending. This repository holds the source of the two voice plugins, **Breeze Voice** and **GPT-SoVITS Voice**, which share one internal runtime.
 
@@ -202,7 +202,7 @@ Both can switch to **MiniMax cloud voice**, which prepares only the shared runti
 
 1. **Install**: in AI Buddy open **Extensions → Discover** and click **Install…** next to Breeze Voice or GPT-SoVITS Voice. Including presets, the Breeze plugin is about 8 MB and GPT-SoVITS about 11 MB. Installation imports the corresponding 11 presets and preserves existing settings; the voice model is prepared the first time it starts.
 2. **Open the voice page**: **Plugins → Voice** in the sidebar, or **Start** / **Open** on the **Installed** tab. Turning voice on in Galgame starts it too.
-3. **Prepare parts**: the first time, parts on this PC show "Needs setup". Click **Download** to start; it shows progress and continues if you leave the page. Only the chosen engine and the shared recognizer are downloaded. From AI Buddy 2.0.12, if a plugin update keeps the same parts and their files are already on this PC, the row shows "Needs verification": click **Verify** next to **Download** instead and nothing is downloaded again. If verification finds a file missing or its content wrong, use **Download**; if it says verification was interrupted or files changed while verifying, click **Verify again**. AI Buddy 2.0.13 fixes verification failing although the files were fine; when a verification is cancelled or fails, files already checked are not checked again next time.
+3. **Prepare parts**: the first time, parts on this PC show "Needs setup". Click **Download** to start; it shows progress and continues if you leave the page. Only the chosen engine and the shared recognizer are downloaded. From AI Buddy 2.0.12, if a plugin update keeps the same parts and their files are already on this PC, the row shows "Needs verification": click **Verify** next to **Download** instead and nothing is downloaded again. If verification finds a file missing or its content wrong, use **Download**; if it says verification was interrupted or files changed while verifying, click **Verify again**. AI Buddy 2.0.14 fixes verification failing although the files were fine; when a verification is cancelled or fails, files already checked are not checked again next time.
 4. **(Optional) Use your recording**: switch to the character in Galgame, then choose **Use my recording…**, type exactly what is said, click **Use this recording** and pick a calm WAV with only one person speaking. GPT-SoVITS needs 3–10 seconds, a requirement of the model that AI Buddy does not check on import. Use only recordings you have the right to use. From AI Buddy 2.0.12, once a character has two or more voices, a **Her voice** menu appears to the left of **Use my recording…**, so you can switch back to the preset voice or to another recording at any time. If she is speaking, that sentence stops and the next one uses the new voice.
 5. **Use it in chat**: **Voice** at the right of the Galgame top bar shows the state; click it to turn voice on or off and choose the plugin and where voices are made.
 
@@ -212,7 +212,7 @@ Click **Live** right of the input box: you say a line, she answers, and it is yo
 
 ### MiniMax cloud voice
 
-Set "Where voices are made" to **MiniMax cloud** and add a configuration: name, model and your own MiniMax API key. The key is encrypted on this computer and never shown again; saving a configuration uploads no voices. From AI Buddy 2.0.13 a new configuration has a **Region** choice (Mainland China / International); keys are not shared between regions, so changing the region means entering that region's key, and cloud voice requests follow the proxy under **General settings → Network** (needs voice plugins 1.0.3). When a cloned voice has expired, its row says "This cloud voice has expired." and **Clone again…** makes a new clone after the same cost confirmation. You can change a character's cloud voice (searching the system, cloned or designed voices already in that MiniMax account), or prepare several characters at once. Bulk preparation shows a confirmation listing the characters to upload, the number of new clones and the estimated cost; no character is selected for paid cloning at first. Under MiniMax's official mainland pricing, the standard pay-as-you-go reference price is ¥9.90 per cloned voice, charged the first time it is used, and text synthesis is billed separately under MiniMax's character rules. Your MiniMax account's actual charges and terms are what count. Cancelling stops later steps only; work already submitted may still finish and be charged. A local reference does not automatically become the same cloud voice.
+Set "Where voices are made" to **MiniMax cloud** and add a configuration: name, model and your own MiniMax API key. The key is encrypted on this computer and never shown again; saving a configuration uploads no voices. From AI Buddy 2.0.14 a new configuration has a **Region** choice (Mainland China / International); keys are not shared between regions, so changing the region means entering that region's key, and cloud voice requests follow the proxy under **General settings → Network** (needs voice plugins 1.0.3). When a cloned voice has expired, its row says "This cloud voice has expired." and **Clone again…** makes a new clone after the same cost confirmation. You can change a character's cloud voice (searching the system, cloned or designed voices already in that MiniMax account), or prepare several characters at once. Bulk preparation shows a confirmation listing the characters to upload, the number of new clones and the estimated cost; no character is selected for paid cloning at first. Under MiniMax's official mainland pricing, the standard pay-as-you-go reference price is ¥9.90 per cloned voice, charged the first time it is used, and text synthesis is billed separately under MiniMax's character rules. Your MiniMax account's actual charges and terms are what count. Cancelling stops later steps only; work already submitted may still finish and be charged. A local reference does not automatically become the same cloud voice.
 
 ### Downloads and disk space
 
@@ -228,7 +228,7 @@ Local voice needs an NVIDIA GPU (CUDA). After release, catalog discovery, instal
 
 ### Technical notes
 
-Three packages: `ai-buddy.voice-breeze`, `ai-buddy.voice-gpt-sovits` and the internal `ai-buddy.voice-shared-runtime`, for Windows x64 and AI Buddy >= 2.0.13. All three packages are version 1.0.3; each engine requires shared runtime 1.0.3 exactly. When both engines are installed, the reviewed upgrade plan updates the installed group together and preserves enablement and independent user data.
+Three packages: `ai-buddy.voice-breeze`, `ai-buddy.voice-gpt-sovits` and the internal `ai-buddy.voice-shared-runtime`, for Windows x64. The manifests say AI Buddy >= 2.0.13, but 2.0.13 does not recognize 1.0.3 (it was withdrawn), so use 2.0.14 or later. All three packages are version 1.0.3; each engine requires shared runtime 1.0.3 exactly. From 2.0.14 AI Buddy recognizes voice packages by the major version of the package version and supports 1.x; later 1.x releases declare `appRange` with a lower bound only, at least 2.0.14. See the [voice plugin interface compatibility rules](https://github.com/lXiaoSel1/AI-Buddy/blob/main/docs/VOICE-PLUGIN-COMPATIBILITY.en.md). When both engines are installed, the reviewed upgrade plan updates the installed group together and preserves enablement and independent user data.
 
 With Node **24.21.0**, build from this checkout (no host checkout, npm installation or dependencies):
 
