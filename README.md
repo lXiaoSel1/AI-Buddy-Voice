@@ -12,7 +12,7 @@
 
 [AI 酱本体](https://github.com/lXiaoSel1/AI-Buddy) · [B站陪伴](https://github.com/lXiaoSel1/AI-Buddy-Bilibili) · [QQ连接](https://github.com/lXiaoSel1/AI-Buddy-QQ) · [一起玩牌](https://github.com/lXiaoSel1/AI-Buddy-Card-Games) · **语音**（本仓库）
 
-**当前版本：1.0.3** · 需要 [AI 酱](https://github.com/lXiaoSel1/AI-Buddy) 2.0.14 或更新。这是 AI 酱的官方插件，在 AI 酱的 **扩展中心** 里安装，不用单独下载。之前装过旧版的话，升级到 AI 酱 2.0.14 后，在 **扩展中心 → 更新与维护** 里把它更新到 1.0.3。AI 酱 2.0.14 起按大版本号认语音插件：1.x 的语音插件在 2.0.14 和以后的本体上都能用，本体升级后不用跟着更新。2.0.13 已经撤回，在它上面 1.0.3 装好也启用不了。
+**当前版本：1.0.3** · 需要 [AI 酱](https://github.com/lXiaoSel1/AI-Buddy) 2.0.14 或更新。这是 AI 酱的官方插件，在 AI 酱的 **扩展中心** 里安装，不用单独下载。之前装过旧版的话，升级到 AI 酱 2.0.14 后可以继续用兼容的旧版，也可以在 **扩展中心 → 更新与维护** 里更新到 1.0.3。AI 酱 2.0.14 支持语音接口大版本 1，不再逐个列举补丁号；1.x 插件仍需满足 `appRange` 的最低本体要求，并通过接口、同版本共用组件等兼容与信任检查。2.0.13 已经撤回，在它上面 1.0.3 装好也启用不了。
 
 让 AI 酱里的角色开口说话。她的回复会用她自己的声音读出来，文字跟着播放进度出现；你也可以开 Live 和她轮流说话，或者录一段话转成文字、改好再发。本仓库是两个语音插件 **Breeze 语音** 和 **GPT-SoVITS 语音** 的源码，它们共用一个内部组件。
 
@@ -145,7 +145,7 @@
 
 ## 技术说明
 
-三个插件包：`ai-buddy.voice-breeze`、`ai-buddy.voice-gpt-sovits` 和内部共用的 `ai-buddy.voice-shared-runtime`，面向 Windows x64。清单写的是 AI Buddy >= 2.0.13，但 2.0.13 认不了 1.0.3（已撤回），实际要用 2.0.14 或更新的本体。三个包版本均为 1.0.3，两个引擎都精确依赖共用组件 1.0.3。AI 酱 2.0.14 起按包版本的大版本号认语音包，本体支持 1.x；以后的 1.x 版本 `appRange` 只写下限、至少 2.0.14，约定见 [语音插件接口兼容约定](https://github.com/lXiaoSel1/AI-Buddy/blob/main/docs/VOICE-PLUGIN-COMPATIBILITY.md)。两个引擎都装了时，升级计划会明确列出并一起更新它们和共用组件，保留原来的启停状态和各自的用户资料。
+三个插件包：`ai-buddy.voice-breeze`、`ai-buddy.voice-gpt-sovits` 和内部共用的 `ai-buddy.voice-shared-runtime`，面向 Windows x64。清单写的是 AI Buddy >= 2.0.13，但 2.0.13 认不了 1.0.3（已撤回），实际要用 2.0.14 或更新的本体。三个包版本均为 1.0.3，两个引擎都精确依赖共用组件 1.0.3。AI 酱 2.0.14 按包版本的大版本号认语音包，支持语音接口大版本 1；以后的 1.x 版本 `appRange` 只写下限、至少 2.0.14，约定见 [语音插件接口兼容约定](https://github.com/lXiaoSel1/AI-Buddy/blob/main/docs/VOICE-PLUGIN-COMPATIBILITY.md)。两个引擎都装了时，升级计划会明确列出并一起更新它们和共用组件，保留原来的启停状态和各自的用户资料。
 
 ### 独立构建
 
@@ -169,7 +169,7 @@ node scripts/build.mjs --out=../voice-artifacts
 
 ## English
 
-**Current version: 1.0.3** · requires [AI Buddy](https://github.com/lXiaoSel1/AI-Buddy) 2.0.14 or later. This is an official AI Buddy plugin; install it from **Extensions** inside AI Buddy, no separate download needed. After upgrading AI Buddy to 2.0.14, update an older plugin under **Extensions → Updates and maintenance**. From 2.0.14 AI Buddy recognizes voice plugins by major version: every 1.x voice plugin works with 2.0.14 and later, so an app update does not require a plugin update. 2.0.13 has been withdrawn; on it, 1.0.3 installs but cannot be enabled.
+**Current version: 1.0.3** · requires [AI Buddy](https://github.com/lXiaoSel1/AI-Buddy) 2.0.14 or later. This is an official AI Buddy plugin; install it from **Extensions** inside AI Buddy, no separate download needed. After upgrading AI Buddy to 2.0.14, you can keep a compatible older plugin or update to 1.0.3 under **Extensions → Updates and maintenance**. AI Buddy 2.0.14 supports voice interface major version 1 without listing each patch version; 1.x plugins must still meet their minimum app version in `appRange` and pass compatibility and trust checks, including the interface and matching shared runtime version. 2.0.13 has been withdrawn; on it, 1.0.3 installs but cannot be enabled.
 
 Let your AI Buddy characters talk. Her replies are read aloud in her own voice, with the text following the playback; you can also take turns talking with her in Live, or record a few sentences into text and edit them before sending. This repository holds the source of the two voice plugins, **Breeze Voice** and **GPT-SoVITS Voice**, which share one internal runtime.
 
@@ -228,7 +228,7 @@ Local voice needs an NVIDIA GPU (CUDA). After release, catalog discovery, instal
 
 ### Technical notes
 
-Three packages: `ai-buddy.voice-breeze`, `ai-buddy.voice-gpt-sovits` and the internal `ai-buddy.voice-shared-runtime`, for Windows x64. The manifests say AI Buddy >= 2.0.13, but 2.0.13 does not recognize 1.0.3 (it was withdrawn), so use 2.0.14 or later. All three packages are version 1.0.3; each engine requires shared runtime 1.0.3 exactly. From 2.0.14 AI Buddy recognizes voice packages by the major version of the package version and supports 1.x; later 1.x releases declare `appRange` with a lower bound only, at least 2.0.14. See the [voice plugin interface compatibility rules](https://github.com/lXiaoSel1/AI-Buddy/blob/main/docs/VOICE-PLUGIN-COMPATIBILITY.en.md). When both engines are installed, the reviewed upgrade plan updates the installed group together and preserves enablement and independent user data.
+Three packages: `ai-buddy.voice-breeze`, `ai-buddy.voice-gpt-sovits` and the internal `ai-buddy.voice-shared-runtime`, for Windows x64. The manifests say AI Buddy >= 2.0.13, but 2.0.13 does not recognize 1.0.3 (it was withdrawn), so use 2.0.14 or later. All three packages are version 1.0.3; each engine requires shared runtime 1.0.3 exactly. AI Buddy 2.0.14 recognizes voice packages by the major version of the package version and supports voice interface major version 1; later 1.x releases declare `appRange` with a lower bound only, at least 2.0.14. See the [voice plugin interface compatibility rules](https://github.com/lXiaoSel1/AI-Buddy/blob/main/docs/VOICE-PLUGIN-COMPATIBILITY.en.md). When both engines are installed, the reviewed upgrade plan updates the installed group together and preserves enablement and independent user data.
 
 With Node **24.21.0**, build from this checkout (no host checkout, npm installation or dependencies):
 
